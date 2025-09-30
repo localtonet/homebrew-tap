@@ -1,7 +1,7 @@
 class Localtonet < Formula
   desc "Expose your localhost to the internet securely"
   homepage "https://localtonet.com"
-  version "7.2.0"
+  version "7.3.0"
   license "Proprietary"
 
   on_macos do
