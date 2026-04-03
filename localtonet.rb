@@ -13,10 +13,8 @@ class Localtonet < Formula
   end
 
   def install
-    # Gerçek binaryyi izole et
     libexec.install "localtonet"
 
-    # Wrapper script ile DOTNET_BUNDLE_EXTRACT_BASE_DIR ayarla
     (bin/"localtonet").write <<~EOS
       #!/bin/bash
       export DOTNET_BUNDLE_EXTRACT_BASE_DIR="${HOME}/.localtonet/.net"
