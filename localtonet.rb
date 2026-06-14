@@ -7,13 +7,16 @@ class Localtonet < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://localtonet.com/download/localtonet-osx-arm64.zip"
+      sha256 :no_check
     else
       url "https://localtonet.com/download/localtonet-osx-64.zip"
+      sha256 :no_check
     end
   end
 
   def install
     libexec.install "localtonet"
+    chmod 0755, libexec/"localtonet"
 
     (bin/"localtonet").write <<~EOS
       #!/bin/bash
@@ -21,11 +24,11 @@ class Localtonet < Formula
       mkdir -p "$DOTNET_BUNDLE_EXTRACT_BASE_DIR"
       exec "#{libexec}/localtonet" "$@"
     EOS
-
     chmod 0755, bin/"localtonet"
   end
 
   test do
-    system "#{bin}/localtonet", "--version"
+    output = shell_output("#{bin}/localtonet --version 2>&1", 0)
+    assert_match version.to_s, output
   end
 end
