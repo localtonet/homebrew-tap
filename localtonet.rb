@@ -7,10 +7,8 @@ class Localtonet < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://localtonet.com/download/localtonet-osx-arm64.zip"
-      sha256 :no_check
     else
       url "https://localtonet.com/download/localtonet-osx-64.zip"
-      sha256 :no_check
     end
   end
 
