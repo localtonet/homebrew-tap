@@ -4,11 +4,11 @@ class Localtonet < Formula
   version "8.4.0"
   license "Proprietary"
 
+  url "https://localtonet.com/download/localtonet-osx-64.zip"
+
   on_macos do
     if Hardware::CPU.arm?
       url "https://localtonet.com/download/localtonet-osx-arm64.zip"
-    else
-      url "https://localtonet.com/download/localtonet-osx-64.zip"
     end
   end
 
