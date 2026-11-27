@@ -1,9 +1,9 @@
 cask "elio" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.9"
-  sha256 arm:   "c18d770dc1d2c0bc2bd69f6d07ce7f71a5233c2ac9bcafb2f9b029dec46cbf95",
-         intel: "01bb8bf6cb05dd4f0cc863f29b623bb51ff8ee41da44ee29edb0b96ec63c0615"
+  version "0.2.0"
+  sha256 arm:   "f7405fa012bf4e171fb47b14475474839681cf7d7df78051a41f0e4a0f6c6d11",
+         intel: "5bf3a03d2eb6338e438b7aeff02d89576138c1766a79b7e6cc07c715ab78c44b"
 
   url "https://github.com/localtonet/elio/releases/download/v#{version}/elio-osx-#{arch}.zip"
   name "Elio"
