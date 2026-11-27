@@ -1,7 +1,7 @@
 class Localtonet < Formula
   desc "Expose your localhost to the internet securely"
   homepage "https://localtonet.com"
-  version "8.6.0"
+  version "8.7.0"
   license "Proprietary"
 
   url "https://localtonet.com/download/localtonet-osx-64.zip"
